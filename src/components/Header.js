@@ -3,6 +3,7 @@ import React from "react";
 
 export default function Header() {
   return (
+    <header className='Header'>
     <div className='Header-main'>
       <div className="Header-logo">
         <h1>
@@ -13,5 +14,6 @@ export default function Header() {
         <a href="/about">About</a>
       </div>
     </div>
+    </header>
   );
 }

@@ -1,18 +1,22 @@
 const API = 'https://rickandmortyapi.com/api/character/';
 
-async function getCharacters(name) {
+function getCharacters(name) {
   let urlPoint = name ? `${API}?name=${name}` : API;
-  try{
-    const response = await fetch(urlPoint);
-    const data = await response.json();
-    
-    if (data.info.next.length > 1) {
+
+  return(
+
+    fetch(urlPoint)
+    .then(res => res.json())
+    .then(response => {
+      const results = response.results;
       
-    }
-
-  } catch(err) {
-    console.log(err);
-  }
-
+      const characters = results.map (character => {
+        const {id, name, image} = character;
+        return {id, name, image}
+      })
+      return characters;
+    })
+    .catch(err => console.log(err))
+  )
 }
 export default getCharacters;
