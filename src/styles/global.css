@@ -97,7 +97,28 @@ body {
   text-decoration: none;
   color: #026C86;
 }
-
+.About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+}
+.About__social-media a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+.About__social-media a:last-child {
+  margin-right: 0;
+}
+.About__social-media a img {
+  width: 100%;
+}
 @keyframes fade {
   from {
     opacity: 0;

@@ -31,7 +31,7 @@ export default function CharacterDetails(props) {
             <img src={character.image} alt="name" />
             <h2>{character.name}</h2>
         </article>
-        <article class="Characters-card">
+        <article className="Characters-card">
             <h3>Episodes: <span>{character.episode.length}</span></h3>
             <h3>Status: <span>{character.status}</span></h3>
             <h3>Species: <span>{character.species}</span></h3>
