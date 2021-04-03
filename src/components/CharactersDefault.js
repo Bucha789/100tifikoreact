@@ -7,7 +7,7 @@ export default function CharactersDefault({characters}) {
       {characters.map(character => {
         return (
           <article key={character.id} className="Characters-item">
-            <Link to={`/characters/${character.id}`}>
+            <Link to={`/character/${character.id}`}>
               <img src={character.image} alt="character of rick and morty" />
               <h2>{character.name}</h2>
             </Link>

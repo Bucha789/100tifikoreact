@@ -1,8 +1,22 @@
 const API = 'https://rickandmortyapi.com/api/character/';
 
-function getCharacters(name) {
-  let urlPoint = name ? `${API}?name=${name}` : API;
+function getCharacters(id) {
+  let urlPoint;
+  if (id) {
+    urlPoint = API + id;
+    return(
+      fetch(urlPoint)
+      .then(res => res.json())
+      .then(response => {
+        const characterData = response
+        console.log(characterData)
+        return characterData;
+      })
+      .catch(err => console.log(err))
+    )
+  };
 
+  urlPoint = API;
   return(
 
     fetch(urlPoint)
