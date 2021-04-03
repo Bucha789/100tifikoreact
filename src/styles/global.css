@@ -141,3 +141,19 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+@media (max-width: 400px) {
+  .Characters {
+    grid-template-columns: 1fr;
+  }
+  .Characters-inner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 620px) and (min-width: 400px) {
+  .Characters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .Characters-inner {
+    grid-template-columns: 1fr;
+  }
+}

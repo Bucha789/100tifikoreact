@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import getCharacters from '../services/GetCharacters';
 import Header from '../components/Header'
+import { LoadingAnimation } from '../utils/Animation';
 
 
 export default function CharacterDetails(props) {
@@ -18,8 +19,7 @@ export default function CharacterDetails(props) {
   if (loading) {
     return (
       <div className="Main">
-        <Header />
-        <div>hola estoy cargando...</div>
+        <LoadingAnimation />
       </div>
     );
   }

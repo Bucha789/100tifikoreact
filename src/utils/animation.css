@@ -1,0 +1,63 @@
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.logo img{
+  width: 100px;
+  object-fit: cover;
+}
+.animation-container {
+  width: 320px;
+  height: 20px;
+}
+.animation-container div {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #121418;
+  margin-right: 10px;
+}
+.animation-container div:last-child {
+  margin-right: 0;
+}
+.animation-container .uno {
+  animation-name: brotar;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.animation-container .dos {
+  animation-name: brotar;
+  animation-duration: 5s;
+  animation-delay: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.animation-container .tres {
+  animation-name: brotar;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes brotar {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25%, 59%  {
+    transform: scale(.8);
+  }
+  33%, 66% {
+    transform: scale(1.2);
+  }
+}

@@ -3,7 +3,7 @@ import CharactersDefault from "../components/CharactersDefault";
 import Header from "../components/Header";
 import "../styles/global.css";
 import getCharacters from "../services/GetCharacters";
-
+import { LoadingAnimation } from '../utils/Animation';
 
 function Home() {
   const [loading, setLoading] = useState([false]);
@@ -19,8 +19,7 @@ function Home() {
   if (loading) {
     return (
       <div className="Main">
-        <Header />
-        <div>hola estoy cargando...</div>
+        <LoadingAnimation />
       </div>
     );
   }
